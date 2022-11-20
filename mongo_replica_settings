@@ -1,0 +1,4 @@
+follow the tutorial
+place host name of first host in /etc/hosts file and point it to localhost
+use 0.0.0.0 as binIp on all servers
+set up necessary ufw settings
