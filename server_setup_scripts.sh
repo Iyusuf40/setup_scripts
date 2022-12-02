@@ -25,7 +25,7 @@ sudo pip3 install Flask
 sudo pip3 install flask-cors
 sudo apt-get install -y curl
 sudo apt-get install -y wget
-curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_19.x | sudo -E bash -
 sudo apt-get install -y nodejs
 sudo npm install semistandard --global
 sudo apt-get install -y vim
