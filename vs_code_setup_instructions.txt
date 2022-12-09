@@ -1,0 +1,8 @@
+Install vs code for ubuntu
+install xming
+open xming to serve
+ssh into vagrant with -X flag `vagrant ssh -- -X`
+set DISPLAY variable to 10.0.2.2:0
+`export DISPLAY=10.0.2.2:0` --- you can verify host machine IP with `netstat -rn`
+you can also save the display variable in ~/.profile file
+test with xeyes or xclock
