@@ -1,0 +1,36 @@
+server {
+        server_name flexrecordsm.cloza.tech;
+        access_log flexrecordsm.log;
+
+        root /;
+
+        location /records_api {
+                include proxy_params;
+                proxy_pass http://127.0.0.1:5010$uri;
+        }
+
+        location / {
+                include proxy_params;
+                proxy_pass http://127.0.0.1:3000$request_uri;
+        }
+
+}
+
+server {
+        server_name collabm.cloza.tech;
+        access_log collabm.log;
+
+        location / {
+                include proxy_params;
+                proxy_pass http://127.0.0.1:3001$request_uri;
+        }
+
+        location /ws {
+                include proxy_params;
+                proxy_pass http://127.0.0.1:3001$request_uri;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection "upgrade";
+                proxy_read_timeout 10800s;
+        }
+}
