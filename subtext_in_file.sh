@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sed -i "s/collab.cloza.tech/collab.cloza.org/g" $(find app/static/scripts/ -name '*.js')
+sed -i "s/.cloza.tech/.cloza.org/g" $(find frontend/ -not -path '*node_modu*' -name '*jsx')
