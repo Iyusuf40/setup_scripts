@@ -36,8 +36,8 @@ sudo apt-get install lsb-release curl gpg
 curl -fsSL https://packages.redis.io/gpg | sudo gpg --dearmor -o /usr/share/keyrings/redis-archive-keyring.gpg
 sudo chmod 644 /usr/share/keyrings/redis-archive-keyring.gpg
 echo "deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/redis.list
-sudo apt-get update
-sudo apt-get install redis
+sudo apt-get update -y
+sudo apt-get install redis -y
 
 sudo systemctl enable redis-server
 sudo systemctl start redis-server
@@ -53,5 +53,5 @@ sudo npm install -g typescript
 
 # install certbot
 sudo apt-get install certbot
-sudo apt-get install python3-certbot-nginx
+sudo apt-get install python3-certbot-nginx -y
 
