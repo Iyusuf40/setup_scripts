@@ -48,6 +48,9 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
 # download and install Node.js (you may need to restart the terminal)
 nvm install 22
 
+# install ts
+sudo npm install -g typescript
+
 # install certbot
 sudo apt-get install certbot
 sudo apt-get install python3-certbot-nginx
